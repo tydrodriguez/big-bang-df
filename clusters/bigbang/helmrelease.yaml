@@ -15,35 +15,25 @@ spec:
   install:
     createNamespace: true
   values:
-    registryCredentials:
-      enabled: true
-      useExistingSecrets: true
-      names:
-      - private-registry
     domain: "bb.local"
     networkPolicies:
       enabled: false
     addons:
       istio:
         enabled: true
-      monitoring:
-        premetheus:
-          enabled: true
-        grafana:
-          enabled: true
-        loki:
-          enabled: true
-        promtail:
-          enabled: true
-      
+      prometheus:
+        enabled: true
+      grafana:
+        enabled: true
+      loki:
+        enabled: true
+      promtail:
+        enabled: true
       keycloak:
         enabled: true
-      
       harbor:
         enabled: false
-
       gitlab:
         enabled: false
-      
       neuvector:
         enabled: false
