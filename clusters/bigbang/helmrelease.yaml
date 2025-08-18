@@ -12,8 +12,8 @@ spec:
         kind: GitRepository
         name: bigbang
         namespace: flux-system
-    domain: "bb.local"
     values:
+      domain: "bb.local"
       networkPolicies:
         enabled: false
       istio:
