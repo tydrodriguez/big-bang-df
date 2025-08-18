@@ -18,14 +18,27 @@ spec:
     domain: "bb.local"
     networkPolicies:
       enabled: false
-    istio:
-      enabled: trie
+    addons:
+      istio:
+        enabled: true
+      monitoring:
+        premetheus:
+          enabled: true
+        grafana:
+          enabled: true
+        loki:
+          enabled: true
+        promtail:
+          enabled: true
+      
+      keycloak:
+        enabled: true
+      
+      harbor:
+        enabled: false
 
-    loki: { enabled: true }
-    promtail: { enabled: true }
-    grafana: { enabled: true }
-    prometheus: { enabled: true }
-    keycloak: { enabled: true }
-    gitlab: { enabled: false }
-    harbor: { enabled: false }
-    neuvector: { enabled: false }
+      gitlab:
+        enabled: false
+      
+      neuvector:
+        enabled: false
