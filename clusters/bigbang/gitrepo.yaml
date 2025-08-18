@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: bigbang
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://repo1.dso.mil/platform-one/big-bang/bigbang.git
+  ref:
+    branch: master

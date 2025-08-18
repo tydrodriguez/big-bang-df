@@ -1,0 +1,29 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: bigbang
+  namespace: bigbang
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ./chart
+      sourceRef:
+        kind: GitRepository
+        name: bigbang
+        namespace: flux-system
+    domain: "bb.local"
+    values:
+      networkPolicies:
+        enabled: false
+      istio:
+        enabled: trie
+
+      loki: { enabled: true }
+      promtail: { enabled: true }
+      grafana: { enabled: true }
+      prometheus: { enabled: true }
+      keycloak: { enabled: true }
+      gitlab: { enabled: false }
+      harbor: { enabled: false }
+      neuvector: { enabled: false }
