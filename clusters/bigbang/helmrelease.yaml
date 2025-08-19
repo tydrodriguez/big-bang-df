@@ -27,6 +27,9 @@ spec:
       istio:
         enabled: true
         dependsOn: []
+      istioCrds:
+        enabled: true
+        dependsOn: []
       prometheus:
         enabled: true
       grafana:
