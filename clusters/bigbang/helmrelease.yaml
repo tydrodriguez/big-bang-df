@@ -20,9 +20,11 @@ spec:
       enabled: false
     addons:
       kyverno:
-        enabled: false
+        enabled: true
       kyvernoPolicies:
-        enabled: false
+        enabled: true
+      kyvernoReporter:
+        enabled: true
 
       istio:
         enabled: true
