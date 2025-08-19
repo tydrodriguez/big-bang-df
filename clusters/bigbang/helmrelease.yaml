@@ -23,9 +23,10 @@ spec:
         enabled: false
       kyvernoPolicies:
         enabled: false
-        
+
       istio:
         enabled: true
+        dependsOn: []
       prometheus:
         enabled: true
       grafana:
