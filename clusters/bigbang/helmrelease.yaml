@@ -19,6 +19,11 @@ spec:
     networkPolicies:
       enabled: false
     addons:
+      kyverno:
+        enabled: false
+      kyvernoPolicies:
+        enabled: false
+        
       istio:
         enabled: true
       prometheus:
